@@ -1,0 +1,15 @@
+# docker-compose.yml
+version: "3"
+services:
+  database:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: postgrestutorial
+      POSTGRES_USER: postgrestutorial
+      POSTGRES_DB: postgrestutorial
+    volumes:
+      - postgrestutorial:/var/lib/postgresql/postgrestutorial
+    ports:
+      - 5432:5432
+volumes:
+  postgrestutorial:
